@@ -1,4 +1,8 @@
-<?php include "header.php" ?>
+<?php 
+    include "header.php";
+    include "functions.php"; 
+?>
+
 
 <div class="border border-dark m-3 p-3">
 <h1>String Functions</h1>
@@ -71,32 +75,17 @@
         full_name("Joe", "Borg");
         full_name_custom("Jane","Doe","p");
         full_name_custom("Harry","Potter","h3");
+        full_name_custom2("Gandalf","the Grey","h1","text-danger");
 
+
+        $sum = add(1,2);
+        $sum = add($sum,10);
+        echo "<p>The total is {$sum}.</p>";
 
     ?>
 </div>
 
-<?php 
-    /*
-        Functions are reusable code blocks that can be called from any point in a page
-    */ 
-    function shout(){
-        echo "<p>Let it all out!</p>";
-    }
 
-    /* 
-        This function expects multiple parameters and uses them in its output
-    */
-    function full_name($firstName, $lastName){
-        echo "<p>{$firstName} {$lastName}</p>";
-    }
-
-
-    function full_name_custom($firstName, $lastName, $element){
-        echo "<{$element}>{$firstName} {$lastName}</{$element}>";
-    }
-
-?>
 
 
 
