@@ -51,4 +51,55 @@
 </div>
 
 
+<div class="border border-dark m-3 p-3">
+    <h1>Advanced Functions</h1>
+    <?php 
+        /*
+            This is how we call functions. Any function that is inside the current page or included files are available to be used
+        */
+        shout(); 
+        shout(); 
+        shout(); 
+        shout(); 
+        shout(); 
+        shout(); 
+
+        /*
+            If a function requires parameters (some value) to function, we pass them like this 
+        */
+        full_name("Matthew", "Cumbo");
+        full_name("Joe", "Borg");
+        full_name_custom("Jane","Doe","p");
+        full_name_custom("Harry","Potter","h3");
+
+
+    ?>
+</div>
+
+<?php 
+    /*
+        Functions are reusable code blocks that can be called from any point in a page
+    */ 
+    function shout(){
+        echo "<p>Let it all out!</p>";
+    }
+
+    /* 
+        This function expects multiple parameters and uses them in its output
+    */
+    function full_name($firstName, $lastName){
+        echo "<p>{$firstName} {$lastName}</p>";
+    }
+
+
+    function full_name_custom($firstName, $lastName, $element){
+        echo "<{$element}>{$firstName} {$lastName}</{$element}>";
+    }
+
+?>
+
+
+
+
+
 <?php include "footer.php" ?>
