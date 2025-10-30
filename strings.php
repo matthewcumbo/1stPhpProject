@@ -56,7 +56,7 @@
 
 
 <div class="border border-dark m-3 p-3">
-    <h1>Advanced Functions</h1>
+    <h1>Custom Functions</h1>
     <?php 
         /*
             This is how we call functions. Any function that is inside the current page or included files are available to be used
